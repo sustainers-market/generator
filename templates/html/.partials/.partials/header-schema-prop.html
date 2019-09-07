@@ -1,0 +1,28 @@
+{% from "./header-sub-schema-prop.html" import headerSubSchemaProp %}
+
+{% macro headerSchemaProp(prop, propName, open=false, root=false, odd=false, specialName=false, required=false) %}
+
+<div class="{% if odd %}bg-grey-lighter{% else %}bg-grey-lightest{% endif %} {% if not root %}pl-8 pr-8{% endif %} rounded">
+  <div class="{% if open %}is-open{% endif %}">
+    <div class="js-prop cursor-pointer py-2 flex property">
+      <div class="pr-4" style="margin-top:-2px; width: 15%; min-width: 100px; max-width: 160px">
+        <span class="text-sm {% if specialName %}italic text-grey{% endif %}" style="word-break: break-word;">{{propName}}</span>
+        <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0"
+          xmlns="http://www.w3.org/2000/svg" y="0">
+          <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+        </svg>
+        <div class="text-red-dark text-xs">required</div>
+      </div>
+      <div class="capitalize text-sm text-teal font-bold">object</div>
+    </div>
+
+    <div class="children {% if odd %}bg-grey-lightest{% else %}bg-grey-lighter{% endif %} py-4 rounded">
+      {% for pName, p in prop._json %}
+        {{ headerSubSchemaProp(p, pName, odd=(not odd), required=true) }}
+      {% endfor %}
+      <p class="pl-6 mb-2 mt-4 text-xs text-grey">Additional properties will be ignored.</p>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}
