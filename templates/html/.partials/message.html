@@ -14,6 +14,7 @@
             <span>path</span><span class="border text-orange rounded text-xs ml-1 py-0 px-2">{{msg.name()}}</span>
         </div>
       {% endif %}
+    {% endif %}
   </div>
   <p class="text-grey-dark text-sm">{{msg.summary()}}</p>
   <div class="mt-4 mb-4 markdown">{{ msg.description() | markdown2html | safe }}</div>
