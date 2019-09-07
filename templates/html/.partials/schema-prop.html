@@ -5,7 +5,7 @@
 <div class="{% if odd %}bg-grey-lighter{% else %}bg-grey-lightest{% endif %} {% if not root %}pl-8 pr-8{% endif %} rounded">
   <div class="{% if open %}is-open{% endif %}">
     <div class="{% if prop | isExpandable %}js-prop cursor-pointer py-2{% endif %} flex property">
-      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+      <div class="pr-4" style="margin-top:-2px; min-width: 100px max-width: 250px; width: 20%;">
         <span class="text-sm {% if specialName %}italic text-grey{% endif %}" style="word-break: break-word;">{{propName}}</span>
         {% if prop | isExpandable %}
         <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0"
