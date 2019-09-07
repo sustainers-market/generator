@@ -35,6 +35,14 @@ module.exports = ({ Nunjucks, Markdown, OpenAPISampler }) => {
     return array.includes(element);
   });
 
+  Nunjucks.addFilter('hasUntagged', (channels) => {
+    for (channel of channels) {
+     if (!channel.hasPublish()) continue;
+     if (channel.publish().hasTags()) return true;
+    }
+    return false;
+  });
+
   Nunjucks.addFilter('log', (anything) => {
     console.log(anything);
   });
