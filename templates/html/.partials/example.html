@@ -16,7 +16,7 @@
       {% endfor %}
     {% elif msg.payload() %}
     <pre class="hljs mb-4 border border-grey-darkest rounded"><code>{{ msg.payload().json() | generateExample | safe }}</code></pre>
-    <h6 class="text-xs font-bold text-grey-darker italic">This example has been generated automatically.</h6>
+    <h6 class="text-xs text-grey italic">This example has been generated automatically.</h6>
     {% endif %}
   </div>
 
@@ -28,7 +28,7 @@
       {% endfor %}
     {% elif msg.headers() %}
     <pre class="hljs mb-4 border border-grey-darkest rounded"><code>{{ msg.headers().json() | generateExample | safe }}</code></pre>
-    <h6 class="text-xs font-bold text-grey-darker italic">This example has been generated automatically.</h6>
+    <h6 class="text-xs text-grey italic">This example has been generated automatically.</h6>
     {% endif %}
   </div>
 </form>
