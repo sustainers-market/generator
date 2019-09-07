@@ -83,7 +83,7 @@
       </div>
       {% endfor %}
       {% endif %}
-      <p>{{ asyncpai.channels() | dump }}</p>
+      <p>{{ asyncapi.channels() | dump }}</p>
       {% if asyncapi.channels() | hasUntagged %}
           <!-- Untagged operations -->
           <div class="mt-4 {% if open %}is-open{% endif %}">
