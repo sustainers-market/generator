@@ -37,8 +37,8 @@ module.exports = ({ Nunjucks, Markdown, OpenAPISampler }) => {
 
   Nunjucks.addFilter('hasUntagged', (channels) => {
     for (const channel in channels) {
-     if (!channel.publish()) continue;
-     if (channel.publish().tags()) return true;
+     if (!channel.publish) continue;
+     if (channel.publish.tags && channel.publish.tags.length > 0) return true;
     }
     return false;
   });
