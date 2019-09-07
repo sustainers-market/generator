@@ -20,7 +20,6 @@
 
     <div class="mt-4 mb-4 markdown">{{ channel.description() | markdown2html | safe }}</div>
 
-    <p class="text-grey text-sm">{{operation.summary()}}</p>
     <div class="mt-4 mb-4 markdown">{{ operation.description() | markdown2html | safe }}</div>
 
     {% if operation.hasMultipleMessages() %}
