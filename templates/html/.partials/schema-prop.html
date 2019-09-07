@@ -132,12 +132,12 @@
         {% endif %}
 
         {% if prop.type() === 'object' %}
-          {% if prop.additionalProperties() | isArray or prop.additionalProperties() === true or prop.additionalProperties() === undefined or prop.additionalProperties() === null %}
-            <p class="pl-6 mb-2 mt-4 text-xs text-grey-darker">Additional properties are allowed.</p>
-          {% elif prop.additionalProperties() === false %}
-            <p class="pl-6 mb-2 mt-4 text-xs text-grey-darker">Additional properties are <strong>NOT</strong> allowed.</p>
+          {% if prop.additionalProperties() | isArray or prop.additionalProperties() === true %}
+            <p class="pl-6 mb-2 mt-4 text-xs text-grey">Additional properties are allowed.</p>
+          {% elif prop.additionalProperties() === false or prop.additionalProperties() === undefined or prop.additionalProperties() === null %}
+            <p class="pl-6 mb-2 mt-4 text-xs text-grey">Additional properties will be ignored.</p>
           {% else %}
-            <p class="pl-6 mb-2 mt-4 text-xs font-bold text-grey-darker">Additional properties must adhere to the following schema:</p>
+            <p class="pl-6 mb-2 mt-4 text-xs text-grey">Additional properties must adhere to the following schema:</p>
             <div class="{% if odd %}bg-grey-lightest{% else %}bg-grey-lighter{% endif %} pl-6">
               {{ schemaProp(prop.additionalProperties(), '(property name)', odd=(not odd), open=false, specialName=true) }}
             </div>
