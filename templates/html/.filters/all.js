@@ -35,20 +35,6 @@ module.exports = ({ Nunjucks, Markdown, OpenAPISampler }) => {
     return array.includes(element);
   });
 
-  Nunjucks.addFilter('hasUntagged', (channels) => {
-    for (const channel in channels) {
-     if (!channel.publish) return true;
-     if (!channel.publish.tags || channel.publish.tags.length == 0) return true;
-    }
-    return false;
-  });
-
-  Nunjucks.addFilter('channelHasUntagged', (channel) => {
-    if (!channel.publish) return true;
-    if (!channel.publish.tags || channel.publish.tags.length == 0) return true;
-    return false;
-  });
-
   Nunjucks.addFilter('log', (anything) => {
     console.log(anything);
   });
