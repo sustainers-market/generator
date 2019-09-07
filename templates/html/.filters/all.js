@@ -43,6 +43,12 @@ module.exports = ({ Nunjucks, Markdown, OpenAPISampler }) => {
     return false;
   });
 
+  Nunjucks.addFilter('channelHasUntagged', (channel) => {
+    if (!channel.publish) return true;
+    if (!channel.publish.tags || channel.publish.tags.length == 0) return true;
+    return false;
+  });
+
   Nunjucks.addFilter('log', (anything) => {
     console.log(anything);
   });
