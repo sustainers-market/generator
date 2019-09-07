@@ -44,6 +44,8 @@
         </div>
         <div class="children">
           {% for channelName, channel in asyncapi.channels() %}
+              <p>{{ channelName }}</p>
+              <p>{{ channel | dump }}</p>
              {% if channel.publish() and categorytags.name() === channel.publish().tags()[0].name() %}
               <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-8 sm:mt-8 md:mt-3"
                 href="#operation-publish-{{ channelName }}">
