@@ -49,8 +49,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .markdown pre {
-    background-color: #F1F5F2; 
+    background-color: #f1f5f8; 
     color: #282c34;
+    border-radius: .25rem;
+    padding: 2vw;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
 }
 
 .expand {
