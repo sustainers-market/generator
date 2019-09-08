@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  margin-top: .10em;
+  margin-top: 1em;
   margin-bottom: .5em;
 }
 
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .markdown pre {
     padding: 1rem;
-    margin-bottom: .10rem;
+    margin-bottom: 1rem;
     margin-top: .5rem;
     max-width: 600px;
 }
