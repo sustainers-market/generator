@@ -17,12 +17,12 @@ h1, h2, h3, h4, h5, h6 {
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  margin-top: .5em;
+  margin-top: .10em;
   margin-bottom: .5em;
 }
 
 .markdown h1 {
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .markdown h2 {
@@ -49,13 +49,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .markdown pre {
+    padding: 2vw;
+    margin-bottom: .10rem;
+    margin-top: .5rem;
+    max-width: 600px;
+}
+
+.markdown code {
+     
+}
+
+.markdown code,
+.markdown pre {
     background-color: #f1f5f8; 
     color: #282c34;
     border-radius: .25rem;
-    padding: 2vw;
-    margin-bottom: .5rem;
-    margin-top: .5rem;
-    max-width: 600px;
+     
 }
 
 .expand {
