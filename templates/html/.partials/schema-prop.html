@@ -13,14 +13,14 @@
           <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
         </svg>
         {% endif %}
-        {% if required %}
-          <div class="text-red-dark text-xs">required</div>
-        {% endif %}
       </div>
 
       <div>
         <div class="capitalize text-sm text-teal font-bold">
           {{ type(prop) }}
+        {% if required %}
+          <span class="text-red-dark text-xs">(required)</span>
+        {% endif %}
           {% if prop.anyOf() %}anyOf{% endif %}
           {% if prop.oneOf() %}oneOf{% endif %}
           <div class="inline-block">
