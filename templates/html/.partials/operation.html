@@ -6,6 +6,7 @@
 {% macro operation(operation, operationType, channelName, channel) %}
 
 <a name="operation-{{operationType}}-{{channelName}}"></a>
+<div class="center-block p-8">
   <div class="operation pt-8 pb-8">
     <h3 class="font-mono text-base">
       {% if operationType === 'publish' %}
@@ -33,6 +34,7 @@
 
     {{ tags(operation.tags()) }}
   </div>
+</div>
 
 <div class="right-block p-8">
   <h4 class="text-lg text-grey-dark mb-4">Examples</h4>
