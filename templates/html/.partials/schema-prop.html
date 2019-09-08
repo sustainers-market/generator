@@ -115,7 +115,7 @@
               {{ schemaProp(it, itName, odd=(not odd), required=(prop.required() | contains(pName))) }}
               {% endfor %}
             {% else %}
-              {{ schemaProp(prop.items(), '', odd=(not odd)) }}
+              {{ schemaProp(prop.items(), '0', odd=(not odd)) }}
             {% endif %}
           {% endif %}
 
