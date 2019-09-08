@@ -19,7 +19,7 @@
         <div class="capitalize text-sm text-teal font-bold">
           {{ type(prop) }}
         {% if required %}
-          <span class="text-red-dark text-xs">(required)</span>
+          <span class="font-thin text-grey ml-2">required</span>
         {% endif %}
           {% if prop.anyOf() %}anyOf{% endif %}
           {% if prop.oneOf() %}oneOf{% endif %}
