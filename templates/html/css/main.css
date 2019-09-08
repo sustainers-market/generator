@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .markdown pre {
     padding: 1rem;
+    padding-bottom: 0;
     margin-bottom: 1rem;
     margin-top: .5rem;
     max-width: 600px;
