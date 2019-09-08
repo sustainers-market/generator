@@ -21,7 +21,7 @@
   {{ schema(msg.payload(), 'Payload', open=open) }}
   {% if msg.headers() %}
     <div class="mt-4">
-      {{ schema(msg.headers(), 'Headers', open=open) }}
+      {{ schema(msg.headers(), 'Headers', open=false) }}
     </div>
   {% endif %}
 </div>
