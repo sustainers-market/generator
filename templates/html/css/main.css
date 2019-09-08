@@ -53,9 +53,12 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.markdown code {
+    padding: 0.2rem;
+}
+
 .markdown pre {
     padding: 1rem;
-    padding-bottom: 0;
     margin-bottom: 1rem;
     margin-top: .5rem;
     max-width: 500px;
@@ -64,6 +67,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9em;
     overflow: scroll;
 }
+
+.markdown pre code {
+    padding: 0;
+}
+
 
 .markdown code,
 .markdown pre {
