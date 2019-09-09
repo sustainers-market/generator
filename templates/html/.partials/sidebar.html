@@ -34,7 +34,7 @@
       {% for categorytags in asyncapi.tags() %}
       <div class="mt-4 {% if open %}is-open{% endif %}">
         <div class="js-prop cursor-pointer py-2 flex property">
-          <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+          <div class="pr-4" style="margin-top:-2px;">
             <span class="text-sm font-normal"
               style="word-break: break-word;">{{ categorytags.name() }}</span>
             <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
@@ -45,7 +45,7 @@
         <div class="children">
           {% for channelName, channel in asyncapi.channels() %}
              {% if channel.publish() and categorytags.name() === channel.publish().tags()[0].name() %}
-              <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-8 sm:mt-8 md:mt-3"
+              <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-4 sm:mt-4 md:mt-3"
                 href="#operation-publish-{{ channelName }}">
                 <span class="bg-blue-dark font-bold h-6 no-underline text-white uppercase p-1 mr-2 rounded"
                   style="height: 21px;font-size: 11px;" title="Publish">Cmd</span>
@@ -62,7 +62,7 @@
             {% endif %}
 
             {% if channel.subscribe() and categorytags.name() === channel.subscribe().tags()[0].name() %}
-            <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-8 sm:mt-8 md:mt-3"
+            <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-4 sm:mt-4 md:mt-3"
               href="#operation-subscribe-{{ channelName }}">
               {% if channel.deprecated %}<span title="Deprecated"></span>{% endif %}
               <span class="bg-green-dark font-bold no-underline text-white uppercase p-1 mr-2 rounded"
@@ -90,7 +90,7 @@
       {% for channelName, channel in asyncapi.channels() %}
       <li>
         {% if channel.publish() %}
-        <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-8 sm:mt-8 md:mt-3"
+        <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-4 sm:mt-4 md:mt-3"
           href="#operation-publish-{{ channelName }}">
           <span class="bg-blue-dark font-bold h-6 no-underline text-white uppercase p-1 mr-2 rounded"
             style="height: 21px;font-size: 11px;" title="Publish">Cmd</span>
@@ -106,7 +106,7 @@
         </a>
         {% endif %}
         {% if channel.subscribe() %}
-        <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-8 sm:mt-8 md:mt-3"
+        <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-4 sm:mt-4 md:mt-3"
           href="#operation-subscribe-{{ channelName }}">
           <span class="bg-green-dark font-bold no-underline text-white uppercase p-1 mr-2 rounded"
             style="height: 21px;font-size: 11px;" title="Subscribe">Sub</span>
