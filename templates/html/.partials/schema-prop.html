@@ -121,9 +121,7 @@
 
           {% if prop.additionalItems() | isArray or prop.additionalItems() === true %}
             <p class="pl-6 mb-2 mt-4 text-xs text-grey-darker">Additional items are allowed.</p>
-          {% elif prop.additionalItems() === false or prop.additionalItems() === undefined %}
-            <p class="pl-6 mb-2 mt-4 text-xs text-grey">Additional items will be ignored.</p>
-          {% else %}
+          {% elif prop.additionalItems() === true %}
             <p class="pl-6 mb-2 mt-4 text-xs font-bold text-grey-darker">Additional Items:</p>
             <div class="{% if odd %}bg-grey-lightest{% else %}bg-grey-lighter{% endif %} pl-6">
               {{ schemaProp(prop.additionalItems(), '', odd=(not odd)) }}
